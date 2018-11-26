@@ -1,0 +1,115 @@
+* {
+    -webkit-user-select: none;
+    /* user-select -- это нестандартное свойство */
+
+    -moz-user-select: none;
+    /* поэтому нужны префиксы */
+
+    -ms-user-select: none;
+}
+
+#calendar2 {
+  /*width: 100%;*/
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px auto;
+  width: 400px;
+  height: 400px;
+  background: #B0DBE8;
+  border-radius: 10px;
+  border-spacing: 0;
+  table-layout: fixed;
+} /*весь календарь*/
+
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+} /*дни недели*/
+
+#calendar2 thead tr:nth-child(1) th:nth-child(2) {
+  color: rgb(50, 50, 50);
+  background: #4cb3d3;
+  height: 35px;
+  margin-bottom: 100px;
+  } /*месяц*/
+#calendar2 thead tr:nth-child(1) th:nth-child(3), #calendar2 thead tr:nth-child(1) th:nth-child(1){
+  padding: 0;
+  background: #4cb3d3;
+}
+
+#calendar2 thead tr:nth-child(1) th:nth-child(3){
+  border-radius: 0 10px 10px 0;
+}
+#calendar2 thead tr:nth-child(1) th:nth-child(1){
+  border-radius: 10px 0 0 10px;
+}
+#calendar2 thead tr:nth-child(1) th:nth-child(1):hover, #calendar2 thead tr:nth-child(1) th:nth-child(3):hover {
+  cursor: pointer;
+} /*стрелки*/
+#calendar2 tbody td {
+  height: 58px;
+  box-sizing: border-box;
+  color: rgb(44, 86, 122);
+  text-align: center;
+} /*остальные дни*/
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(231, 140, 92);
+} /*выходные*/
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
+} /*сегодня*/
+
+#today_btn {
+  float: right;
+}
+
+/*D&D*/
+
+.point {
+  background: #7C6B6B;
+  /*position: absolute;*/
+  margin-left: 3px;
+  margin-top: 5px;
+  height: 5px;
+  width: 50px;
+  cursor: pointer;
+  float: left;
+}
+
+.fill {
+  
+  /*background-image: url('img/line48.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #7C6B6B;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 5px;
+  height: 5px;
+  width: 50px;
+  cursor: pointer;
+  top: 25px;
+  left: 5px;*/
+  
+}
+
+/*.hold {
+  border: solid 2px #ccc;
+}*/
+
+.empty {
+  /*display: inline-block;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  border: solid 1px salmon;
+  background: white;*/
+}
+
+.hovered {
+  /*background: #f4f4f4;*/
+  border: dashed 2px;
+}
